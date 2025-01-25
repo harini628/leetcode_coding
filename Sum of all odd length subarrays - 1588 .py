@@ -4,14 +4,13 @@ class Solution(object):
         n = len(arr)
 
         for i in range(n):
-           
-            total_subarrays = (i + 1) * (n - i)
-            odd_subarrays = (total_subarrays + 1) // 2
-
-            total_sum += odd_subarrays * arr[i]
+            for j in range(i, n):
+                if (j - i + 1) % 2 == 1:  
+                    total_sum += sum(arr[i:j + 1])  
 
         return total_sum
 
+# Test cases
 obj = Solution()
 print(obj.sumOddLengthSubarrays([1, 4, 2, 5, 3]))  
 print(obj.sumOddLengthSubarrays([1, 2]))          
