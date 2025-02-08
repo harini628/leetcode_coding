@@ -14,8 +14,6 @@ class Solution(object):
 obj = Solution()
 nums1 = [1, 1, 2]
 k1 = obj.removeDuplicates(nums1)
-
-
 nums2 = [0, 0, 1, 1, 1, 2, 2, 3, 3, 4]
 k2 = obj.removeDuplicates(nums2)
 
