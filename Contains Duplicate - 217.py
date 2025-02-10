@@ -1,11 +1,14 @@
 class Solution(object):
     def containsDuplicate(self, nums):
-        for i in range(1,len(nums)-1):
-            nums.sort()
+        nums.sort()
+        sol = False
+        if (len(nums)==1):
+            return sol
+        for i in range(len(nums)):
             if(nums[i]==nums[i-1]):
-                return True
-        return False
-       
+                sol = True
+                break
+        return sol
 obj = Solution()
 obj.containsDuplicate([1,2,3,1])
 obj.containsDuplicate([1,2,3,4])
